@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daybreak — Theme Toggle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <header class="topbar">
+            <div class="wordmark">
+                <span class="wordmark-glyph" aria-hidden="true">◐</span>
+                <span>Daybreak</span>
+            </div>
+
+            <button id="themeToggle" class="toggle" type="button" role="switch" aria-checked="false"
+                aria-label="Switch to dark mode">
+                <span class="toggle-track">
+                    <span class="toggle-star s1" aria-hidden="true"></span>
+                    <span class="toggle-star s2" aria-hidden="true"></span>
+                    <span class="toggle-star s3" aria-hidden="true"></span>
+                    <span class="toggle-thumb">
+                        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <line x1="12" y1="1.5" x2="12" y2="4"></line>
+                                <line x1="12" y1="20" x2="12" y2="22.5"></line>
+                                <line x1="1.5" y1="12" x2="4" y2="12"></line>
+                                <line x1="20" y1="12" x2="22.5" y2="12"></line>
+                                <line x1="4.2" y1="4.2" x2="6" y2="6"></line>
+                                <line x1="18" y1="18" x2="19.8" y2="19.8"></line>
+                                <line x1="4.2" y1="19.8" x2="6" y2="18"></line>
+                                <line x1="18" y1="6" x2="19.8" y2="4.2"></line>
+                            </g>
+                        </svg>
+                        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"></path>
+                        </svg>
+                    </span>
+                </span>
+            </button>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">Project 3 — dark / light mode toggle</p>
+            <h1>One switch. <em>Two moods.</em></h1>
+            <p class="lede">
+                Flip the sky in the corner. Your preference is saved, so the page
+                remembers what you picked next time you drop by.
+            </p>
+        </section>
+
+        <section class="cards" aria-label="Demo content">
+            <article class="card">
+                <span class="card-index mono">01</span>
+                <h2>Reads the system</h2>
+                <p>On first visit, Daybreak checks your device's preferred colour scheme before picking a default.</p>
+            </article>
+            <article class="card">
+                <span class="card-index mono">02</span>
+                <h2>Remembers you</h2>
+                <p>Your choice is written to <code>localStorage</code>, so refreshing or returning later keeps it
+                    intact.</p>
+            </article>
+            <article class="card">
+                <span class="card-index mono">03</span>
+                <h2>Transitions smoothly</h2>
+                <p>Colours, borders and shadows cross-fade together instead of snapping, so the switch feels physical.
+                </p>
+            </article>
+        </section>
+
+        <footer class="foot mono">
+            <span id="modeStatus">light mode</span>
+            <span>·</span>
+            <span>press the switch or hit <kbd>T</kbd></span>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
